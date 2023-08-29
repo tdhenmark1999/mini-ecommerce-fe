@@ -13,7 +13,7 @@ function Signin() {
         e.preventDefault();
 
         try {
-            const response = await axios.post(`${apiBaseUrl}/auth/signin`, { email, password });
+            const response = await axios.post(`https://mern-ecommerce-be-a2c5bbe52789.herokuapp.com/api/auth/signin`, { email, password });
             console.log(response.data);
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('userId', response.data.userId);
